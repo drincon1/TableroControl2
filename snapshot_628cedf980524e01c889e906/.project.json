@@ -1,0 +1,16 @@
+{
+    "dataBinding": {
+        "/webapp/view/Menu.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/TableroClientes.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/TableroProspectos.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Popover1.view.xml": {
+            "entitySet": ""
+        } 
+    }
+}

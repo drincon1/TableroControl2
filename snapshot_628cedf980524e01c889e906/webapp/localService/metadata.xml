@@ -1,0 +1,61 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="5daf1029fdddb4bd1742bb20" xml:lang="en" sap:schema-version="0000" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="5daf1029fdddb4bd1742bb20_Entities" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="CompraSet" EntityType="5daf1029fdddb4bd1742bb20.Compra" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="CompraCompraLeadLead" Association="5daf1029fdddb4bd1742bb20.CompraCompraLeadLead" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="CompraSet" Role="FromRole_CompraCompraLeadLead"/>
+                    <End EntitySet="LeadSet" Role="ToRole_CompraCompraLeadLead"/>
+                </AssociationSet>
+                <EntitySet Name="LeadSet" EntityType="5daf1029fdddb4bd1742bb20.Lead" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+            </EntityContainer>
+            <EntityType Name="Compra">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Torre" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Torre"/>
+                <Property Name="Unidad" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Unidad"/>
+                <Property Name="Lanzamiento" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Lanzamiento"/>
+                <Property Name="PrecioLista" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PrecioLista"/>
+                <Property Name="FormaPago" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="FormaPago"/>
+                <Property Name="Descuento" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Descuento"/>
+                <Property Name="PrecioFinal" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PrecioFinal"/>
+                <Property Name="Estatus" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Estatus"/>
+                <Property Name="Asesor" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Asesor"/>
+                <Property Name="NombreCompleto" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="NombreCompleto"/>
+                <Property Name="Email" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Email"/>
+                <Property Name="LugarReembolso" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="LugarReembolso"/>
+                <Property Name="Edad" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Edad"/>
+                <Property Name="Clase1" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Clase1"/>
+                <Property Name="Clase2" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Clase2"/>
+                <Property Name="Clase3" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Clase3"/>
+                <Property Name="Clase4" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Clase4"/>
+                <Property Name="Clase5" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Clase5"/>
+                <Property Name="___FK_00eb43af84d1b9d517469d15_00026" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_00eb43af84d1b9d517469d15_00026"/>
+                <NavigationProperty Name="CompraLead" Relationship="5daf1029fdddb4bd1742bb20.CompraCompraLeadLead" FromRole="FromRole_CompraCompraLeadLead" ToRole="ToRole_CompraCompraLeadLead"/>
+            </EntityType>
+            <Association Name="CompraCompraLeadLead">
+                <End Type="5daf1029fdddb4bd1742bb20.Compra" Multiplicity="1" Role="FromRole_CompraCompraLeadLead"/>
+                <End Type="5daf1029fdddb4bd1742bb20.Lead" Multiplicity="1" Role="ToRole_CompraCompraLeadLead"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_CompraCompraLeadLead">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_CompraCompraLeadLead">
+                        <PropertyRef Name="___FK_00eb43af84d1b9d517469d15_00026"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="Lead">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Name" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Name"/>
+                <Property Name="Email" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Email"/>
+                <Property Name="Campana" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Campana"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

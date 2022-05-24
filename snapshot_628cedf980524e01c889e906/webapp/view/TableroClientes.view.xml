@@ -1,0 +1,193 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.tablerosDeControl20.controller.TableroClientes" xmlns="sap.m" xmlns:chart="sap.chart" xmlns:data="sap.chart.data" xmlns:layout="sap.ui.commons.layout">
+    <Page showHeader="false" title="Page Title" showFooter="false" showNavButton="false" enableScrolling="false">
+        <content>
+            <layout:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
+                <layout:positions>
+                    <layout:PositionContainer left="131px" top="108px">
+                        <layout:control>
+                            <Title text="Ventas por Lanzamiento" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="793px" top="92px">
+                        <layout:control>
+                            <Title text="Ventas por País por Lanzamiento" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="8px" top="101px">
+                        <layout:control>
+                            <chart:Chart id="sap_m_Page_0-content-sap_chart_PieChart-1652819239925" width="563.0965576171875px" height="388.11077880859375px" visibleDimensions="Lanzamiento" visibleMeasures="MES_ID_COUNT" vizProperties="{staticDataModel>/sap_m_Page_0-content-sap_chart_PieChart-1652819239925/vizProperties}" chartType="pie" selectionMode="Single" uiConfig="{}">
+                                <chart:dimensions>
+                                    <data:Dimension name="Lanzamiento" label="Lanzamiento" role="category"/>
+                                </chart:dimensions>
+                                <chart:measures>
+                                    <data:Measure name="MES_ID_COUNT" label="Lanzamiento" role="axis2"/>
+                                </chart:measures>
+                            </chart:Chart>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="569px" top="99px">
+                        <layout:control>
+                            <chart:Chart id="sap_m_Page_0-content-sap_chart_LineChart-1652821002811" width="707.53000000px" height="392.116455078125px" visibleDimensions="LugarReembolso,Lanzamiento" visibleMeasures="MES_Lanzamiento_COUNT" vizProperties="{staticDataModel>/sap_m_Page_0-content-sap_chart_LineChart-1652821002811/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                <chart:dimensions>
+                                    <data:Dimension name="LugarReembolso" label="País" role="category"/>
+                                    <data:Dimension name="Lanzamiento" role="series"/>
+                                </chart:dimensions>
+                                <chart:measures>
+                                    <data:Measure name="MES_Lanzamiento_COUNT" label="Ventas" role="axis2"/>
+                                </chart:measures>
+                            </chart:Chart>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="27px" top="720px">
+                        <layout:control>
+                            <chart:Chart id="sap_m_Page_0-content-sap_chart_BarChart-1652884253275" width="570.8096313476562px" height="90.73863220214844px" visibleDimensions="Clase2" visibleMeasures="MES_ID_DISTINCTCOUNT" vizProperties="{staticDataModel>/sap_m_Page_0-content-sap_chart_BarChart-1652884253275/vizProperties}" chartType="bar" selectionMode="Single" uiConfig="{}">
+                                <chart:dimensions>
+                                    <data:Dimension name="Clase2" label="Clase 1" role="series"/>
+                                </chart:dimensions>
+                                <chart:measures>
+                                    <data:Measure name="MES_ID_DISTINCTCOUNT" label="Asistentes C2" role="axis2"/>
+                                </chart:measures>
+                            </chart:Chart>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="953px" top="647px">
+                        <layout:control>
+                            <chart:Chart id="sap_m_Page_0-content-sap_chart_PieChart-1652895054678" width="316.9886169433594px" height="228.99147033691406px" visibleDimensions="Estatus" visibleMeasures="MES_ID_DISTINCTCOUNT" vizProperties="{staticDataModel>/sap_m_Page_0-content-sap_chart_PieChart-1652895054678/vizProperties}" chartType="pie" selectionMode="Single" uiConfig="{}">
+                                <chart:dimensions>
+                                    <data:Dimension name="Estatus" label="Country" role="category"/>
+                                </chart:dimensions>
+                                <chart:measures>
+                                    <data:Measure name="MES_ID_DISTINCTCOUNT" label="Profit" role="axis2"/>
+                                </chart:measures>
+                            </chart:Chart>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="26px" top="538px">
+                        <layout:control>
+                            <chart:Chart id="sap_m_Page_0-content-sap_chart_BarChart-1652884333204" width="570.8096313476562px" height="86.61931610107422px" visibleDimensions="Clase4" visibleMeasures="MES_ID_DISTINCTCOUNT" vizProperties="{staticDataModel>/sap_m_Page_0-content-sap_chart_BarChart-1652884333204/vizProperties}" chartType="bar" selectionMode="Single" uiConfig="{}">
+                                <chart:dimensions>
+                                    <data:Dimension name="Clase4" label="Clase 1" role="series"/>
+                                </chart:dimensions>
+                                <chart:measures>
+                                    <data:Measure name="MES_ID_DISTINCTCOUNT" label="Asistentes C4" role="axis2"/>
+                                </chart:measures>
+                            </chart:Chart>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="28px" top="626px">
+                        <layout:control>
+                            <chart:Chart id="sap_m_Page_0-content-sap_chart_BarChart-1652884292723" width="568.1107788085938px" height="86.61931610107422px" visibleDimensions="Clase3" visibleMeasures="MES_ID_DISTINCTCOUNT" vizProperties="{staticDataModel>/sap_m_Page_0-content-sap_chart_BarChart-1652884292723/vizProperties}" chartType="bar" selectionMode="Single" uiConfig="{}">
+                                <chart:dimensions>
+                                    <data:Dimension name="Clase3" label="Clase 1" role="series"/>
+                                </chart:dimensions>
+                                <chart:measures>
+                                    <data:Measure name="MES_ID_DISTINCTCOUNT" label="Asistentes C3" role="axis2"/>
+                                </chart:measures>
+                            </chart:Chart>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="29px" top="808px">
+                        <layout:control>
+                            <chart:Chart id="sap_m_Page_0-content-sap_chart_BarChart-1652883126836" width="570.12000000px" height="91.00000000px" visibleDimensions="Clase1" visibleMeasures="MES_ID_DISTINCTCOUNT" vizProperties="{staticDataModel>/sap_m_Page_0-content-sap_chart_BarChart-1652883126836/vizProperties}" chartType="bar" selectionMode="Single" uiConfig="{}">
+                                <chart:dimensions>
+                                    <data:Dimension name="Clase1" label="Clase 1" role="series"/>
+                                </chart:dimensions>
+                                <chart:measures>
+                                    <data:Measure name="MES_ID_DISTINCTCOUNT" label="Asistentes C1" role="axis2"/>
+                                </chart:measures>
+                            </chart:Chart>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="691px" top="756px">
+                        <layout:control>
+                            <Title text="Descuentos aplicados" titleStyle="Auto" width="159.8721466064453px" textAlign="Begin" visible="true" wrapping="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="701px" top="528px">
+                        <layout:control>
+                            <Title text="Forma de pago" titleStyle="Auto" width="117.51419830322266px" textAlign="Begin" visible="true" wrapping="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="220px" top="508px">
+                        <layout:control>
+                            <Title text="Asistencia a las clases" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="1038px" top="647px">
+                        <layout:control>
+                            <Title text="Estatus" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="58px" top="905px">
+                        <layout:control>
+                            <Text text="Los valores en 1 son quienes asistieron a clase, &quot;No value&quot; quiere decir no asistencia" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="16px" top="1000px">
+                        <layout:control>
+                            <chart:Chart id="sap_m_Page_0-content-sap_chart_HeatmapChart-1652884866663" width="1239.49000000px" height="541.0084838867188px" visibleDimensions="__metadata/uri" visibleMeasures="PrecioFinal" vizProperties="{staticDataModel>/sap_m_Page_0-content-sap_chart_HeatmapChart-1652884866663/vizProperties}" chartType="heatmap" selectionMode="Single" uiConfig="{}">
+                                <chart:dimensions>
+                                    <data:Dimension name="__metadata/uri" label="Store Name" role="category" textProperty="NombreCompleto"/>
+                                </chart:dimensions>
+                                <chart:measures>
+                                    <data:Measure name="PrecioFinal" label="Revenue" role="axis2"/>
+                                </chart:measures>
+                            </chart:Chart>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="386px" top="20px">
+                        <layout:control>
+                            <Title text="Tableros de control Clientes" titleStyle="H1" width="auto" textAlign="Center" visible="true" wrapping="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="492px" top="978px">
+                        <layout:control>
+                            <Title text="Clientes de Tickets más Altos" titleStyle="H3" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="611px" top="744px">
+                        <layout:control>
+                            <chart:Chart id="sap_m_Page_0-content-sap_chart_DonutChart-1652886316797" width="353.25000000px" height="213.25000000px" visibleDimensions="Descuento" visibleMeasures="MES_ID_DISTINCTCOUNT" vizProperties="{staticDataModel>/sap_m_Page_0-content-sap_chart_DonutChart-1652886316797/vizProperties}" chartType="donut" selectionMode="Single" uiConfig="{}">
+                                <chart:dimensions>
+                                    <data:Dimension name="Descuento" label="Country" role="category"/>
+                                </chart:dimensions>
+                                <chart:measures>
+                                    <data:Measure name="MES_ID_DISTINCTCOUNT" label="Profit" role="axis2"/>
+                                </chart:measures>
+                            </chart:Chart>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="592px" top="524px">
+                        <layout:control>
+                            <chart:Chart id="sap_m_Page_0-content-sap_chart_DonutChart-1652886080209" width="414.71588134765625px" height="211.84658813476562px" visibleDimensions="FormaPago" visibleMeasures="MES_ID_DISTINCTCOUNT" vizProperties="{staticDataModel>/sap_m_Page_0-content-sap_chart_DonutChart-1652886080209/vizProperties}" chartType="donut" selectionMode="Single" uiConfig="{}">
+                                <chart:dimensions>
+                                    <data:Dimension name="FormaPago" label="Country" role="category"/>
+                                </chart:dimensions>
+                                <chart:measures>
+                                    <data:Measure name="MES_ID_DISTINCTCOUNT" label="Profit" role="axis2"/>
+                                </chart:measures>
+                            </chart:Chart>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="47px" top="17px">
+                        <layout:control>
+                            <Button text="Menu" type="Transparent" icon="sap-icon://menu" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                </layout:positions>
+            </layout:AbsoluteLayout>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Save" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>
